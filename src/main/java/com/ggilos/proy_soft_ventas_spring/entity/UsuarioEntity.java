@@ -2,6 +2,7 @@ package com.ggilos.proy_soft_ventas_spring.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Value;
 
 @Entity
 @Builder

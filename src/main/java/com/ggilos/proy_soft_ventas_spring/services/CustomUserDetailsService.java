@@ -1,6 +1,6 @@
 package com.ggilos.proy_soft_ventas_spring.services;
 
-import com.ggilos.proy_soft_ventas_spring.CustomUserDetails;
+import com.ggilos.proy_soft_ventas_spring.custom.CustomUserDetails;
 import com.ggilos.proy_soft_ventas_spring.entity.UsuarioEntity;
 import com.ggilos.proy_soft_ventas_spring.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;

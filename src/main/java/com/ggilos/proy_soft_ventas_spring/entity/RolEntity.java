@@ -24,7 +24,7 @@ public class RolEntity {
 
     @Column(name = "rol_Nombre", unique = true, nullable = false)
     @Enumerated(EnumType.STRING)
-    private RolEnum rol;
+    private RolEnum rolNombre;
 
 
     //Relación Rol con Usuarios

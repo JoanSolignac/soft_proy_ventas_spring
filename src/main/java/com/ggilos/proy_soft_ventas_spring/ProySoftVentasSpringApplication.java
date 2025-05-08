@@ -29,12 +29,12 @@ public class ProySoftVentasSpringApplication {
 
                 RolEntity admin = RolEntity
                         .builder()
-                        .rol(RolEnum.ADMIN)
+                        .rolNombre(RolEnum.ADMIN)
                         .build();
 
                 RolEntity user = RolEntity
                         .builder()
-                        .rol(RolEnum.USER)
+                        .rolNombre(RolEnum.USER)
                         .build();
 
                 rolRepository.saveAll(
@@ -48,6 +48,7 @@ public class ProySoftVentasSpringApplication {
                     UsuarioEntity userAdmin = UsuarioEntity
                             .builder()
                             .userName("admin")
+                            .rol(admin)
                             .password(passwordEncoder.encode("admin"))
                             .build();
 

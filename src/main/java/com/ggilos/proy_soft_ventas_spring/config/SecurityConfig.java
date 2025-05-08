@@ -41,10 +41,16 @@ public class SecurityConfig {
                 .formLogin(form -> form
                 .loginPage("/auth/login")  // Aquí le dices dónde está tu login
                 .loginProcessingUrl("/auth/login") // Este es el action del formulario
-                .defaultSuccessUrl("/dashboard", true)
+                .defaultSuccessUrl("/index", true)
                 .permitAll()
         )
-                .logout(logout -> logout.permitAll())
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login?logout")
+                        .invalidateHttpSession(true)
+                        .deleteCookies("JSESSIONID")
+                        .permitAll()
+                )
                 .build();
     }
 
